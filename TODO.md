@@ -14,6 +14,7 @@ To facilitate cherry picking of sample/ assay/tube by providing a visual view of
 
 ### In Progress ...
 - [] Split out the parseFile function into parseFile and groupby functions
+- [] integrate groupby function into the parseFile
 - [] Create function to parse through file for dynamic creation of plates using the groupby JSON => Split the JSON object into individual objects on the Plate ID Key => plateNames must be outside a function to be exported
 - [] loop through the array to access the individual plates
 

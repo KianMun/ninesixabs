@@ -21,15 +21,17 @@ function parseFile() {
       tableColumnsFromFirstRow = Object.keys(d);;
     }
     return d;
-  });
+  })
+return data;
+}
 
-  var groupBy = function(xs, key) {
+function groupBy(){
+  var groupby = function(xs, key){
     return xs.reduce(function(rv, x){
-      (rv[x[key]] = rv[x[key]] || []).push(x);
+      ((rv)[x[key]] = rv[x[key]] || []).push(x);
       return rv;
-    }, {});
-  };
-
+    }), {};
+  }
   var firstColName = tableColumnsFromFirstRow[0]; //Get first column name
 
   var groupbyplate = groupBy(data, firstColName); //Group by first column name => Plate ID
@@ -53,7 +55,39 @@ function parseFile() {
   // Or display all table columns from data present in first row
   tabulate("#table_output", data.filter(function(d,i){return i<5})); //show only top 5 rows
   
-}
+};
+
+  // var groupBy = function(xs, key) {
+  //   return xs.reduce(function(rv, x){
+  //     (rv[x[key]] = rv[x[key]] || []).push(x);
+  //     return rv;
+  //   }, {});
+  // };
+
+  // var firstColName = tableColumnsFromFirstRow[0]; //Get first column name
+
+  // var groupbyplate = groupBy(data, firstColName); //Group by first column name => Plate ID
+  // //console.log(groupbyplate['S80175422']);
+
+  // var plateNames = Object.keys(groupbyplate);
+
+  // var numofplates = Object.keys(groupbyplate).length
+
+
+  // var groupbyplateJSON = JSON.stringify(groupbyplate);
+
+  // document.querySelector("#text_output").innerHTML = ("<h3>Plates info:</h3>" 
+  // + "<p>There are " + "<b>" + numofplates + "</b>" 
+  // + " plates.</p>" + "<b><i>Plate Names:</i></b> " + plateNames);
+
+  // document.querySelector("#create_plates").innerHTML = ("<h3>Create Cherry Pick Plates</h3>" + "<p><button className='btn' onClick={''}>Click to launch</button></p>")
+  // // Could specify table columns to grab from dataset
+  // // tabulate("#full_table_output", data, ["id", "first_name", "last_name"]); 
+
+  // // Or display all table columns from data present in first row
+  // tabulate("#table_output", data.filter(function(d,i){return i<5})); //show only top 5 rows
+  
+
 
 // function parseFile() {
 //   var data = d3.csvParse(reader.result, function(d, i) { //i => index
