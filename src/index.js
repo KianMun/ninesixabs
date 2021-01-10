@@ -1,17 +1,36 @@
-import React from 'react';
+//Default React imports
+import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import reportWebVitals from './reportWebVitals';
+
+//Dependencies imports
+
+
+//External file imports
+import './css/index.css';
+import {plates} from './plates.js'
+import Plate from './Plate'
+import FileUpload from './load_csv'
+import LoadCSV from './parse_csv'
+
+
+
+
+function PlateList() {
+  return (
+      <section className='platelist'>
+      {plates.map((plate)=> {
+        return <Plate key={plate.id}{...plate}></Plate>;
+      })}
+    </section>
+  );
+}
+
+
 
 ReactDOM.render(
-  <React.StrictMode>
-    <App />
-  </React.StrictMode>,
-  document.getElementById('root')
-);
+<div>
+  <LoadCSV />
+  <PlateList />
+</div>, 
+document.getElementById('root'));
 
-// If you want to start measuring performance in your app, pass a function
-// to log results (for example: reportWebVitals(console.log))
-// or send to an analytics endpoint. Learn more: https://bit.ly/CRA-vitals
-reportWebVitals();
