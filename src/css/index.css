@@ -1,0 +1,85 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+
+td {
+  text-align: left;
+  font-size: 80%;
+  border: 2px solid #ee3e80;
+  padding: 8px;
+  width: 22px;
+  height: 20px;
+  margin: 5px;
+  border-radius: 100px;}
+
+th {
+  text-align: center;
+}
+
+td:hover {
+  background-color: #fc03e3;}
+
+td:active {
+  background-color: #faf87a;}
+
+
+.title {
+  color:#ee3e80;
+  font-weight: bold;
+  font-family:'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.file-input {
+  margin-bottom: 20px;
+}
+.preview {
+  color:#ee3e80;
+}
+
+.preview-title{
+  color:#ee3e80;
+}
+.user-instructions{
+  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+#text_output h3 {
+  color:#ee3e80;
+}
+
+#create_plates h3{
+  color:#ee3e80;
+}
+
+#table_output td{
+  border: 1px solid #ee3e80;
+  border-radius:0;
+  text-align: center;
+  }
+
+#table_output td:hover {
+  background-color: #faf87a;
+}
+
+#table_output th{
+  font-style:initial;
+  font-weight:bold;
+  font-size: smaller;
+  white-space: nowrap;
+  border: 1px solid #ee3e80;
+  padding: 8px;
+}
+
+#table_output th:hover {
+  background-color: #faf87a;
+}
